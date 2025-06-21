@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react"; // useEffectを追加
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -21,26 +21,35 @@ export function AdminDashboard({
   const [selectedSubmission, setSelectedSubmission] =
     useState<ContactSubmission | null>(null);
   const [isUpdating, setIsUpdating] = useState(false);
+  const [mounted, setMounted] = useState(false); // ← 追加
   const router = useRouter();
 
+  // クライアントサイドでマウントされたかを確認
+  useEffect(() => {
+    setMounted(true);
+  }, []); // ← 追加
+
   const handleStatusChange = async (id: string, status: "read" | "unread") => {
+    console.log(`🖱️ Button clicked: ${id} → ${status}`); // デバッグログ
     setIsUpdating(true);
 
     try {
       const result = await updateContactStatus(id, status);
+      console.log(`📡 Server Action result:`, result); // デバッグログ
 
       if (result.success) {
-        // Optimistic Update
+        // ローカル状態を更新
         const updatedSubmissions = submissions.map((submission) =>
           submission.id === id ? { ...submission, status } : submission
         );
         setSubmissions(updatedSubmissions);
 
+        // 選択中のアイテムも更新
         if (selectedSubmission?.id === id) {
           setSelectedSubmission({ ...selectedSubmission, status });
         }
 
-        // revalidatePath()があるので、遅延なしで即座に実行
+        // ページを更新
         router.refresh();
       }
     } catch (error) {
@@ -52,6 +61,16 @@ export function AdminDashboard({
   };
 
   const unreadCount = submissions.filter((s) => s.status === "unread").length;
+
+  // 日付フォーマット関数
+  const formatDate = (timestamp: string) => {
+    if (!mounted) {
+      // サーバーサイドでは簡単なフォーマット
+      return new Date(timestamp).toISOString().slice(0, 16).replace("T", " ");
+    }
+    // クライアントサイドでは日本語フォーマット
+    return new Date(timestamp).toLocaleString("ja-JP");
+  }; // ← 追加
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -110,7 +129,7 @@ export function AdminDashboard({
                         {submission.status === "unread" ? "未読" : "既読"}
                       </Badge>
                       <span className="text-sm text-gray-500">
-                        {new Date(submission.timestamp).toLocaleString("ja-JP")}
+                        {formatDate(submission.timestamp)} {/* ← 修正 */}
                       </span>
                     </div>
                     <div className="space-y-1">
@@ -184,9 +203,7 @@ export function AdminDashboard({
                   <div className="flex items-center gap-2">
                     <Clock className="h-4 w-4 text-gray-500" />
                     <span className="text-sm text-gray-600 dark:text-gray-400">
-                      {new Date(selectedSubmission.timestamp).toLocaleString(
-                        "ja-JP"
-                      )}
+                      {formatDate(selectedSubmission.timestamp)} {/* ← 修正 */}
                     </span>
                   </div>
 
