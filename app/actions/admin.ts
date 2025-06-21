@@ -75,6 +75,7 @@ export async function updateContactStatus(
     await put(`contacts/${id}.json`, JSON.stringify(submission, null, 2), {
       access: "public",
       contentType: "application/json",
+      allowOverwrite: true,
     });
 
     console.log(`✅ Successfully updated status to ${status}`); // ← 追加
