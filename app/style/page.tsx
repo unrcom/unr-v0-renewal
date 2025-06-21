@@ -4,8 +4,10 @@ import { MobileMenu } from "@/components/mobile-menu";
 
 export default function StylePage() {
   const developmentItems = [
-    <Link href="https://link.bkiban.com">link bkiban</Link>,
-    <Link href="https://qiita.com/unr/items/12d16cbc491a9c3e4af6">
+    <Link key="bkiban" href="https://link.bkiban.com">
+      link bkiban
+    </Link>,
+    <Link key="apple" href="https://qiita.com/unr/items/12d16cbc491a9c3e4af6">
       Mac (apple silicon) 上に開発環境を構築する（できるだけ CLI
       を用いる動機です）
     </Link>,
