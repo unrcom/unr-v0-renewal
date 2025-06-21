@@ -30,26 +30,22 @@ export function AdminDashboard({
       const result = await updateContactStatus(id, status);
 
       if (result.success) {
-        // ローカル状態を更新
+        // Optimistic Update
         const updatedSubmissions = submissions.map((submission) =>
           submission.id === id ? { ...submission, status } : submission
         );
         setSubmissions(updatedSubmissions);
 
-        // 選択中のアイテムも更新
         if (selectedSubmission?.id === id) {
           setSelectedSubmission({ ...selectedSubmission, status });
         }
 
-        // 少し待ってからページを更新（確実にするため）
-        setTimeout(() => {
-          router.refresh();
-        }, 500);
+        // revalidatePath()があるので、遅延なしで即座に実行
+        router.refresh();
       }
     } catch (error) {
       console.error("Status update error:", error);
-      // エラーの場合はページをリロード
-      window.location.reload();
+      router.refresh();
     } finally {
       setIsUpdating(false);
     }
