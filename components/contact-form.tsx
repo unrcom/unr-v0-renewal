@@ -1,14 +1,20 @@
-"use client"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { submitContactForm } from "@/app/actions/contact"
-import { useActionState } from "react"
+"use client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { submitContactForm } from "@/app/actions/contact";
+import { useActionState } from "react";
 
 export function ContactForm() {
-  const [state, action, isPending] = useActionState(submitContactForm, null)
+  const [state, action, isPending] = useActionState(submitContactForm, null);
 
   return (
     <form action={action} className="space-y-6">
@@ -22,16 +28,22 @@ export function ContactForm() {
             <SelectValue placeholder="選択してください" />
           </SelectTrigger>
           <SelectContent className="dark:bg-gray-800 dark:border-gray-700">
-            <SelectItem value="consultation" className="dark:text-gray-200 dark:focus:bg-gray-700">
+            <SelectItem
+              value="consultation"
+              className="dark:text-gray-200 dark:focus:bg-gray-700"
+            >
               ご相談
             </SelectItem>
-            <SelectItem value="project" className="dark:text-gray-200 dark:focus:bg-gray-700">
-              プロジェクト依頼
-            </SelectItem>
-            <SelectItem value="support" className="dark:text-gray-200 dark:focus:bg-gray-700">
+            <SelectItem
+              value="support"
+              className="dark:text-gray-200 dark:focus:bg-gray-700"
+            >
               サポート
             </SelectItem>
-            <SelectItem value="other" className="dark:text-gray-200 dark:focus:bg-gray-700">
+            <SelectItem
+              value="other"
+              className="dark:text-gray-200 dark:focus:bg-gray-700"
+            >
               その他
             </SelectItem>
           </SelectContent>
@@ -102,5 +114,5 @@ export function ContactForm() {
         </div>
       )}
     </form>
-  )
+  );
 }

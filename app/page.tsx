@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { MobileMenu } from "@/components/mobile-menu"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { MobileMenu } from "@/components/mobile-menu";
 
 export default function HomePage() {
   return (
@@ -18,22 +18,40 @@ export default function HomePage() {
               </Link>
             </div>
             <nav className="hidden lg:flex items-center space-x-6">
-              <Link href="/" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Home
               </Link>
-              <Link href="/mission" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/mission"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Mission
               </Link>
-              <Link href="/prof" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/prof"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Profile
               </Link>
-              <Link href="/style" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/style"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Style
               </Link>
-              <Link href="/times" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/times"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Times
               </Link>
-              <Link href="/contact" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/contact"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Contact
               </Link>
             </nav>
@@ -49,7 +67,7 @@ export default function HomePage() {
               Welcome to unremoted.com
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              リモートワークとデジタル変革のソリューションを提供します
+              生成AIとカスタムSaaSでソリューションをご提供しています
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -64,7 +82,7 @@ export default function HomePage() {
                 size="lg"
                 className="dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
               >
-                詳細を見る
+                <Link href="/prof">詳細を見る</Link>
               </Button>
             </div>
           </div>
@@ -80,5 +98,5 @@ export default function HomePage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

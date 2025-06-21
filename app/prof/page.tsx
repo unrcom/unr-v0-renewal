@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { MobileMenu } from "@/components/mobile-menu"
+import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { MobileMenu } from "@/components/mobile-menu";
 
 export default function ProfPage() {
   const companyData = {
@@ -15,13 +15,16 @@ export default function ProfPage() {
       住所: "東京都新宿区新宿5-11-30",
       建物: "新宿第五葉山ビル308号室",
     },
-    公的金融機関: ["東京三協信用金庫 新宿支店", "GMOあおぞらネット銀行 法人営業部"],
+    取引金融機関: [
+      "東京三協信用金庫 新宿支店",
+      "GMOあおぞらネット銀行 法人営業部",
+      "三井住友銀行 トランクＮＯＲＴＨ支店",
+    ],
     代表社員: {
       氏名: "石光能治",
       メールアドレス: "ishi32@unremoted.com",
-      電話番号: "070-4700-1622",
     },
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -37,22 +40,40 @@ export default function ProfPage() {
               </Link>
             </div>
             <nav className="hidden lg:flex items-center space-x-6">
-              <Link href="/" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Home
               </Link>
-              <Link href="/mission" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/mission"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Mission
               </Link>
-              <Link href="/prof" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/prof"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Profile
               </Link>
-              <Link href="/style" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/style"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Style
               </Link>
-              <Link href="/times" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/times"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Times
               </Link>
-              <Link href="/contact" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/contact"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Contact
               </Link>
             </nav>
@@ -80,5 +101,5 @@ export default function ProfPage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

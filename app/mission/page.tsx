@@ -1,6 +1,7 @@
-import Link from "next/link"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { MobileMenu } from "@/components/mobile-menu"
+import Link from "next/link";
+import Image from "next/image";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { MobileMenu } from "@/components/mobile-menu";
 
 export default function MissionPage() {
   return (
@@ -17,22 +18,40 @@ export default function MissionPage() {
               </Link>
             </div>
             <nav className="hidden lg:flex items-center space-x-6">
-              <Link href="/" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Home
               </Link>
-              <Link href="/mission" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/mission"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Mission
               </Link>
-              <Link href="/prof" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/prof"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Profile
               </Link>
-              <Link href="/style" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/style"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Style
               </Link>
-              <Link href="/times" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/times"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Times
               </Link>
-              <Link href="/contact" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/contact"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Contact
               </Link>
             </nav>
@@ -55,14 +74,15 @@ export default function MissionPage() {
 
               {/* Mission 1 */}
               <div className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">ミッション1</h2>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+                  ミッション1
+                </h2>
                 <h3 className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
                   SaaS開発を通して社会に貢献する
                 </h3>
 
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                   SaaSの定義は諸説ありますが、弊社では「ネットワーク越しにサービスを提供するもの」としています。
-                  Wikipediaにも記載がありますので詳しくはこちらをご確認ください。
                 </p>
 
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
@@ -70,44 +90,54 @@ export default function MissionPage() {
                 </p>
 
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                  その後しばらくの間同業者様技術の開発支援をして学ぶ機会をいただいたのですが、つい先日（2025年4月）より、新しいSaaSの開発を始めました。
-                  競争形は違うものになりますが、今は試行錯誤を繰り返してカオスの中を奮闘しています。
+                  その後しばらくの間は、同業者様のプロジェクトで開発支援をして、学びと命を繋ぐ活動をしていました。
+                  つい先日（2025年4月）より、新しいSaaSの開発を始めました。
+                  今は試行錯誤を繰り返してカオスの中を奮闘しています。
+                  とりあえずの作品がこちらです。
                 </p>
 
-                <p className="text-gray-700 dark:text-gray-300 mb-4 font-semibold">link.bkiban</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 font-semibold">
+                  <Link
+                    href="https://link.bkiban.com"
+                    className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+                  >
+                    link.bkiban
+                  </Link>
+                </p>
 
-                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                {/* <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                   また先日AWSさんより株式用のクレジットをいただくことが出来ましたので「
                   <span className="text-cyan-600 dark:text-cyan-400 font-medium">
                     AWSにおけるマルチテナントSaaSの実装パターンとサーバーレス活用
                   </span>
-                  」を参照していこうと思っているところです。
-                </p>
+                  」を紐解いていこうと思っているところです。
+                </p> */}
               </div>
 
               {/* Mission 2 */}
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">ミッション2</h2>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+                  ミッション2
+                </h2>
                 <h3 className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
-                  お客様主導のSaaS運用チームを構築する
+                  生成AI に全部！
                 </h3>
 
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                  SaaSで業務をまかなうことができれば、それはとても重要なこと。またはとっぷり開発にメッチしているかのいずれかだと思います。
-                  前者の場合でもシステムの安定した運用や、システム間のデータ連携や方に慣れたデータの保全などを担う運用チームを検討する必要があります。
+                  生成AI
+                  でコードを生成するようになって３か月経過しました。(2025年6月現在です)
                 </p>
-
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                  スクラッチ開発の場合は、システム間の連携部分や運用サポートもベンダー任せでざんていましたが、SaaSの時代ではここは自社の運用チームの仕事となってきます。
+                  日々トライの連続ですが、こんな感じで日々を過ごしています。
                 </p>
 
+                <Image src="/style.png" width={500} height={500} alt="style" />
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                  SaaSの管理機能を理解して運用することだけでなく、データのバックアップ、システム間のデータ連携やデータ移行の技術を持った、新しい運用チームを社内に構築するお手伝いをしたいと思っております。
+                  　
                 </p>
-
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  SaaSのおかげでawsさんが大きく成功される先にあるものの1つあった、その後成功できるものの何か、というビジネス可能になったと思っています。
-                  そんな中でここでシステムの維持、管理、データ操作のプロが必要です。
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  生成AI と SaaS のおかげで aws
+                  さんがよく言われている「先に成功するのはあなた、その次に成功できるのが私」というビジネスが可能になりました。
                 </p>
               </div>
             </div>
@@ -124,5 +154,5 @@ export default function MissionPage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

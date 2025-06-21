@@ -1,11 +1,14 @@
-import Link from "next/link"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { MobileMenu } from "@/components/mobile-menu"
+import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { MobileMenu } from "@/components/mobile-menu";
 
 export default function StylePage() {
   const developmentItems = [
-    "link bkiban",
-    "Mac (apple silicon) 上に開発環境を構築する（できるだけ CLI を用いる動機です）",
+    <Link href="https://link.bkiban.com">link bkiban</Link>,
+    <Link href="https://qiita.com/unr/items/12d16cbc491a9c3e4af6">
+      Mac (apple silicon) 上に開発環境を構築する（できるだけ CLI
+      を用いる動機です）
+    </Link>,
     "2023年版・日常業務のはじめかた",
     "React + Nextjs + TypeScript による Vercel CDN からの静的コンテンツ配信",
     "React による シングルページWebアプリケーション (SPA)の開発",
@@ -17,7 +20,7 @@ export default function StylePage() {
     "aws S3 + CloudFront による静的 Web ページの配信",
     "Mac (Intel chip) での開発に必要なツールのインストール",
     "Docker container を用いた React + Redux Toolkit + TypeScript による Webフロントエンド開発環境の構築",
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -33,22 +36,40 @@ export default function StylePage() {
               </Link>
             </div>
             <nav className="hidden lg:flex items-center space-x-6">
-              <Link href="/" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Home
               </Link>
-              <Link href="/mission" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/mission"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Mission
               </Link>
-              <Link href="/prof" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/prof"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Profile
               </Link>
-              <Link href="/style" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/style"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Style
               </Link>
-              <Link href="/times" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/times"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Times
               </Link>
-              <Link href="/contact" className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors">
+              <Link
+                href="/contact"
+                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+              >
                 Contact
               </Link>
             </nav>
@@ -62,7 +83,10 @@ export default function StylePage() {
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border dark:border-gray-700 p-6 sm:p-8 lg:p-12">
             <div className="space-y-4">
               {developmentItems.map((item, index) => (
-                <div key={index} className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                <div
+                  key={index}
+                  className="text-gray-700 dark:text-gray-300 leading-relaxed"
+                >
                   {item}
                 </div>
               ))}
@@ -80,5 +104,5 @@ export default function StylePage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
