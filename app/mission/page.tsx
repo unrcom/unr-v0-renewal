@@ -137,7 +137,7 @@ export default function MissionPage() {
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                   生成AI と SaaS のおかげで aws
-                  さんがよく言われている「先に成功するのはあなた、その次に成功できるのが私」というビジネスが可能になりました。
+                  さんがよく言われている「先に成功するのはあなた、次に成功できるのが私」というビジネスが可能になりました。
                 </p>
               </div>
             </div>
