@@ -5,7 +5,6 @@ import { MobileMenu } from "@/components/mobile-menu";
 export default function StylePage() {
   const developmentItems = [
     <Link
-      key="bkiban"
       href="https://link.bkiban.com"
       rel="noopener noreferrer"
       target="_blank"
