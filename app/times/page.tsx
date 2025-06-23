@@ -7,7 +7,7 @@ export default function TimesPage() {
     {
       period: "2025年5月",
       events: [
-        "生成AI (Claude Model) を用いたコード自動生成プロジェクトを開始し、複数のワークロードを試行中",
+        "生成AI (Claude model) を用いたコード自動生成プロジェクトを開始し複数のワークロードを試行中",
       ],
     },
     {
