@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { MobileMenu } from "@/components/mobile-menu";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
 export default function TimesPage() {
   const timelineData = [
@@ -76,58 +75,7 @@ export default function TimesPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Header */}
-      <header className="bg-cyan-500 dark:bg-gray-800 text-white">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <ThemeToggle />
-              <MobileMenu currentPath="/times" />
-              <Link href="/" className="text-xl font-semibold">
-                unremoted.com
-              </Link>
-            </div>
-            <nav className="hidden lg:flex items-center space-x-6">
-              <Link
-                href="/"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/mission"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Mission
-              </Link>
-              <Link
-                href="/prof"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Profile
-              </Link>
-              <Link
-                href="/style"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Style
-              </Link>
-              <Link
-                href="/times"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Times
-              </Link>
-              <Link
-                href="/contact"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Contact
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <SiteHeader currentPath="/times" />
 
       {/* Main Content */}
       <main className="flex-1 py-8 sm:py-12 lg:py-16">
@@ -174,14 +122,7 @@ export default function TimesPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-cyan-500 dark:bg-gray-800 text-white">
-        <div className="container mx-auto px-4 py-6">
-          <div className="text-center">
-            <p className="text-sm sm:text-base">We are unremoted.com</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

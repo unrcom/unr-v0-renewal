@@ -1,63 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { MobileMenu } from "@/components/mobile-menu";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
 export default function MissionPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Header */}
-      <header className="bg-cyan-500 dark:bg-gray-800 text-white">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <ThemeToggle />
-              <MobileMenu currentPath="/mission" />
-              <Link href="/" className="text-xl font-semibold">
-                unremoted.com
-              </Link>
-            </div>
-            <nav className="hidden lg:flex items-center space-x-6">
-              <Link
-                href="/"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/mission"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Mission
-              </Link>
-              <Link
-                href="/prof"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Profile
-              </Link>
-              <Link
-                href="/style"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Style
-              </Link>
-              <Link
-                href="/times"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Times
-              </Link>
-              <Link
-                href="/contact"
-                className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
-              >
-                Contact
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <SiteHeader currentPath="/mission" />
 
       {/* Main Content */}
       <main className="flex-1 py-8 sm:py-12 lg:py-16">
@@ -78,7 +27,7 @@ export default function MissionPage() {
                   ミッション1
                 </h2>
                 <h3 className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
-                  SaaS開発を通して社会に貢献する
+                  SaaS開発を通じて社会に貢献する
                 </h3>
 
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
@@ -100,18 +49,12 @@ export default function MissionPage() {
                   <Link
                     href="https://link.bkiban.com"
                     className="hover:text-cyan-200 dark:hover:text-gray-300 transition-colors"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     link.bkiban
                   </Link>
                 </p>
-
-                {/* <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                  また先日AWSさんより株式用のクレジットをいただくことが出来ましたので「
-                  <span className="text-cyan-600 dark:text-cyan-400 font-medium">
-                    AWSにおけるマルチテナントSaaSの実装パターンとサーバーレス活用
-                  </span>
-                  」を紐解いていこうと思っているところです。
-                </p> */}
               </div>
 
               {/* Mission 2 */}
@@ -119,8 +62,9 @@ export default function MissionPage() {
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   ミッション2
                 </h2>
+
                 <h3 className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
-                  生成AI に全部！
+                  AI駆動開発
                 </h3>
 
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
@@ -128,10 +72,15 @@ export default function MissionPage() {
                   でコードを生成するようになって３か月経過しました。(2025年6月現在です)
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                  日々トライの連続ですが、こんな感じで日々を過ごしています。
+                  トライの連続ではありますが、こんな感じで日々を過ごしています。
                 </p>
 
-                <Image src="/style.png" width={500} height={500} alt="style" />
+                <Image
+                  src="/style.png"
+                  width={1000}
+                  height={1000}
+                  alt="style"
+                />
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                   　
                 </p>
@@ -139,20 +88,79 @@ export default function MissionPage() {
                   生成AI と SaaS のおかげで aws
                   さんがよく言われている「先に成功するのはあなた、次に成功できるのが私」というビジネスが可能になりました。
                 </p>
+
+                <h3 className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
+                  RAG に全部！
+                </h3>
+
+                <Image src="/RAG.png" width={1000} height={1000} alt="style" />
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  　
+                </p>
+                <Image src="/RAG2.png" width={1000} height={1000} alt="style" />
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  　
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  Modular RAG &gt; Advanced RAG &gt; Naive RAG
+                  の順に高機能で複雑な実装になる。
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  これらは異なる実装ではなくて、Naive RAG から開発を開始し、
+                  十分な回答が得られなかった場合に Advanced RAG
+                  へ機能を拡張する、 といった開発が可能となります。
+                </p>
+
+                <h3 className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
+                  Agentic AI でどうにかする
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  これまでは「プロンプトでどうにかする」
+                  という「一発出し」の生成結果に一喜一憂していました。 Claude 4
+                  (2025年５月22日リリース) の登場により、 LLM
+                  側で回答の自己評価を行うようになり、
+                  回答が不十分と判断された場合は LLM
+                  側で再思考を行なって回答を作り直すようになりました。 LLM は
+                  再思考の際に自己の知識が不足していると判断した場合には
+                  Web検索ツールを用いて
+                  Web検索を実行し複数のページから情報を取得します。
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  (Amazon Bedrock から Claude 4 model
+                  を利用する場合は、セキュリティを確保
+                  (検索クエリーから情報漏洩するリスクを回避) するため、この
+                  Web検索は利用不可になっています)
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  このように LLM
+                  が自力で再思考、調査を行うようになったことから、
+                  回答のクオリティは格段に高まりました。 しかしながら LLM
+                  任せの「回答評価」「Web検索による調査」「再思考」「再評価」は
+                  予想外の結果に至ることも多く、まだまだ確率的というか、
+                  再現性の低いギャンブルのような印象を受けます。
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  Agentic AI は
+                  「自律的に意思決定を行い、人間の介入を最小限に抑えながら、
+                  複雑なタスクを継続的に実行できるAI」 と定義されており、 生成AI
+                  の利用体験を大きく変えるものになります。
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  しかしながらその実現は「普段使い」の現場ではまだ先の話し、と言う印象です。
+                  調査方法をある程度は実装し
+                  (これには拡張検索技術が有効になります) 、
+                  思考繋ぐ仕組みを実装する (ひとつのエージェントではなくて、
+                  いくつかの専門性を有するエージェントの思考を組み合わせる
+                  Modular RAG の技術が有効です)
+                  ことで、有効な回答を再現性を確保し、かつ責任あるAIとして提供できるようになります。
+                </p>
               </div>
             </div>
           </div>
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-cyan-500 dark:bg-gray-800 text-white">
-        <div className="container mx-auto px-4 py-6">
-          <div className="text-center">
-            <p className="text-sm sm:text-base">We are unremoted.com</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
