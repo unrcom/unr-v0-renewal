@@ -35,7 +35,7 @@ export default function MissionPage() {
                 </p>
 
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                  弊社では2022年にsirokuro.siteというSNSのようなサイトを公開し半年運営しましたが、全く認知されることもなくサービス終了しました。
+                  2022年にsirokuro.siteというSNSのようなサイトを公開し半年運営しましたが、全く認知されることもなくサービス終了しました。
                 </p>
 
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
@@ -62,11 +62,9 @@ export default function MissionPage() {
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   ミッション2
                 </h2>
-
                 <h3 className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
                   AI駆動開発
                 </h3>
-
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                   生成AI
                   でコードを生成するようになって３か月経過しました。(2025年6月現在です)
@@ -74,7 +72,6 @@ export default function MissionPage() {
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                   トライの連続ではありますが、こんな感じで日々を過ごしています。
                 </p>
-
                 <Image
                   src="/style.png"
                   width={1000}
@@ -88,11 +85,9 @@ export default function MissionPage() {
                   生成AI と SaaS のおかげで aws
                   さんがよく言われている「先に成功するのはあなた、次に成功できるのが私」というビジネスが可能になりました。
                 </p>
-
                 <h3 className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
-                  RAG に全部！
+                  RAG でどうにかする
                 </h3>
-
                 <Image src="/RAG.png" width={1000} height={1000} alt="style" />
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                   　
@@ -110,7 +105,6 @@ export default function MissionPage() {
                   十分な回答が得られなかった場合に Advanced RAG
                   へ機能を拡張する、 といった開発が可能となります。
                 </p>
-
                 <h3 className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
                   Agentic AI でどうにかする
                 </h3>
@@ -149,11 +143,41 @@ export default function MissionPage() {
                   しかしながらその実現は「普段使い」の現場ではまだ先の話し、と言う印象です。
                   調査方法をある程度は実装し
                   (これには拡張検索技術が有効になります) 、
-                  思考繋ぐ仕組みを実装する (ひとつのエージェントではなくて、
+                  思考を繋ぐ仕組みを実装する (ひとつのエージェントではなくて、
                   いくつかの専門性を有するエージェントの思考を組み合わせる
                   Modular RAG の技術が有効です)
                   ことで、有効な回答を再現性を確保し、かつ責任あるAIとして提供できるようになります。
                 </p>
+                <h3 className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
+                  じゃあどうする？
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  PoC に尽きると思います。{" "}
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  ソニーグループではこれまで (2025年6月現在) で 260 件以上の PoC
+                  を実施しており、 そのうちの 40
+                  件が本番運用に移行したそうです。 丁寧に PoC
+                  を回して、良い筋のユースケースを発見するのが最初の一歩になるんだと思います。
+                </p>
+                <h3 className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
+                  旅に出よう
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  成功を収めた SaaS 開発はとても息の長い挑戦になります。
+                  これを誰かが「SaaS
+                  ジャーニー」と呼ぶようになり、最近の開発現場は「〇〇ジャーニー」だらけになっています。
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                  「生成AI」や「LLM」の利用も、何年間も苦楽を共にする息の長い挑戦になる可能性があります。
+                  PoC
+                  を丁寧に回して、良い筋のユースケースを「最速で」に見つけることと、
+                  上手に「最速で」失敗を経験することがとても重要だと思います。
+                  弊社ではこのようなお客様の PoC
+                  の実践を支援することで、お客様の AI
+                  ジャーニーに貢献したいと考えています。
+                </p>
+                　{" "}
               </div>
             </div>
           </div>
