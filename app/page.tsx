@@ -5,9 +5,11 @@ import { SiteFooter } from "@/components/site-footer";
 import {
   FileText,
   ExternalLink,
-  Scale,
+  Network,
   Users,
   MessageSquare,
+  Target,
+  CheckCircle,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -53,7 +55,7 @@ export default function HomePage() {
                 Company Constitution
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                私たちが大切にする価値観と行動指針
+                分散型組織として大切にする価値観と行動指針
               </p>
             </div>
 
@@ -62,157 +64,236 @@ export default function HomePage() {
                 {/* 前文 */}
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500 dark:bg-cyan-600 rounded-full mb-4">
-                    <Scale className="w-8 h-8 text-white" />
+                    <Network className="w-8 h-8 text-white" />
                   </div>
                   <div className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                       前文
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      私たちは、お客様、パートナー企業、そして社会全体との信頼関係を基盤とし、技術を通じて豊かな未来を創造することを使命とします。すべての人の自由と多様性を尊重し、公正で透明な事業活動を行うことをここに宣言します。
+                      私たちは、中央集権的な統制に依存せず、各メンバーの自律性とネットワークの力を信じます。失敗を恐れず、変化を受け入れ、オープンな協働を通じて持続的な価値を創造することをここに宣言します。
                     </p>
                   </div>
                 </div>
 
                 <div className="space-y-6">
-                  {/* 第一章 包括的自由権 */}
+                  {/* 第一章 分散型意思決定 */}
                   <div className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm">
                     <div className="flex items-center mb-6">
                       <div className="w-12 h-12 bg-blue-500 dark:bg-blue-600 rounded-lg flex items-center justify-center mr-4">
                         <Users className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                        第一章　包括的自由権
+                        第一章　分散型意思決定
                       </h3>
                     </div>
 
                     <div className="space-y-4">
                       <div>
                         <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                          第1条（基本的人権の尊重）
+                          第1条（自律的判断権）
                         </h4>
                         <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
                           <li>
                             •
-                            すべての人が生まれながらに持つ自由と権利を最大限に尊重します
+                            各メンバーは、専門領域において自律的な意思決定権を持ちます
                           </li>
                           <li>
                             •
-                            個人の尊厳を何よりも大切にし、これを侵すことはありません
+                            中央の承認を待つことなく、迅速な判断と実行を行います
                           </li>
                         </ul>
                       </div>
 
                       <div>
                         <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                          第2条（個人の尊重）
+                          第2条（集合知の活用）
                         </h4>
                         <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
                           <li>
                             •
-                            すべての個人が持つ生命、自由、幸福を追求する権利を尊重します
+                            重要な決定は、関係者との対話と情報共有を通じて行います
                           </li>
-                          <li>• 一人ひとりの価値観と選択を大切にします</li>
+                          <li>
+                            • 多様な視点を取り入れ、集合知を最大限に活用します
+                          </li>
                         </ul>
                       </div>
                     </div>
                   </div>
 
-                  {/* 第二章 法の下の自由と多様性 */}
+                  {/* 第二章 再生・適応能力 */}
                   <div className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm">
                     <div className="flex items-center mb-6">
                       <div className="w-12 h-12 bg-green-500 dark:bg-green-600 rounded-lg flex items-center justify-center mr-4">
-                        <Scale className="w-6 h-6 text-white" />
+                        <Network className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                        第二章　法の下の自由と多様性
+                        第二章　再生・適応能力
                       </h3>
                     </div>
 
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                        第3条（平等と多様性）
-                      </h4>
-                      <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
-                        <li>
-                          • 法の下での平等を守り、多様性豊かな組織を構築します
-                        </li>
-                        <li>
-                          •
-                          性別、年齢、国籍、信条、社会的地位によって差別することはありません
-                        </li>
-                        <li>
-                          •
-                          多様な背景を持つ人々との協働によって、組織をより柔軟かつ強固にしていきます
-                        </li>
-                      </ul>
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第3条（失敗からの学習）
+                        </h4>
+                        <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+                          <li>
+                            • 失敗を学習と成長の機会として積極的に受け入れます
+                          </li>
+                          <li>
+                            • 迅速な試行錯誤を通じて最適解を見つけ出します
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第4条（変化への適応）
+                        </h4>
+                        <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+                          <li>
+                            • 環境の変化に柔軟に対応し、組織自体を進化させます
+                          </li>
+                          <li>• 固定的な構造やプロセスに固執しません</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
 
-                  {/* 第三章 精神的自由 */}
+                  {/* 第三章 オープンネットワーク */}
                   <div className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm">
                     <div className="flex items-center mb-6">
                       <div className="w-12 h-12 bg-purple-500 dark:bg-purple-600 rounded-lg flex items-center justify-center mr-4">
                         <MessageSquare className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                        第三章　精神的自由
+                        第三章　オープンネットワーク
                       </h3>
                     </div>
 
                     <div className="space-y-4">
                       <div>
                         <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                          第4条（思想・良心の自由）
-                        </h4>
-                        <p className="text-gray-600 dark:text-gray-300 ml-4">
-                          • すべての人の思想と良心の自由を尊重します
-                        </p>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                          第5条（信教の自由）
-                        </h4>
-                        <p className="text-gray-600 dark:text-gray-300 ml-4">
-                          • 宗教的信念や価値観の多様性を認め、尊重します
-                        </p>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                          第6条（表現の自由）
+                          第5条（透明性の確保）
                         </h4>
                         <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
-                          <li>• 社内においては一切の表現の自由を保障します</li>
                           <li>
                             •
-                            社外においては、常にお客様と社会全体の利益のために責任を持った表現を行います
+                            情報とナレッジを積極的に共有し、組織の透明性を保ちます
                           </li>
                           <li>
                             •
-                            お客様とお客様の資産に対しては、お客様との契約の下、お客様の利益のために責任を持って取り扱います
+                            ただし、顧客との契約に基づく秘密保持義務は厳格に遵守します
                           </li>
                         </ul>
                       </div>
 
                       <div>
                         <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                          第7条（活動の自由）
+                          第6条（外部との協働）
                         </h4>
-                        <p className="text-gray-600 dark:text-gray-300 ml-4">
-                          •
-                          職業選択や居住の自由など、基本的な生活の自由を尊重します
-                        </p>
+                        <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+                          <li>
+                            •
+                            組織の境界を超えた協働とパートナーシップを積極的に構築します
+                          </li>
+                          <li>
+                            •
+                            オープンソース精神に基づいた知識の共有と相互発展を目指します
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 第四章 触媒としてのリーダーシップ */}
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-orange-500 dark:bg-orange-600 rounded-lg flex items-center justify-center mr-4">
+                        <Users className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                        第四章　触媒としてのリーダーシップ
+                      </h3>
+                    </div>
+
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第7条（エンパワーメント）
+                        </h4>
+                        <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+                          <li>
+                            •
+                            リーダーは統制者ではなく、メンバーの能力を引き出す触媒として機能します
+                          </li>
+                          <li>
+                            • 各メンバーが最大限の力を発揮できる環境を整備します
+                          </li>
+                        </ul>
                       </div>
 
                       <div>
                         <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                          第8条（学問・技術の自由）
+                          第8条（持続可能な成長）
                         </h4>
                         <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
-                          <li>• 学習と技術革新への自由な探求を支援します</li>
-                          <li>• 創造的な発想と挑戦を奨励します</li>
+                          <li>
+                            •
+                            一時的な成功ではなく、組織とメンバーの持続的な成長を追求します
+                          </li>
+                          <li>
+                            •
+                            ネットワーク全体の繁栄を通じて、個々の成功を実現します
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 第五章 顧客価値の創造 */}
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-red-500 dark:bg-red-600 rounded-lg flex items-center justify-center mr-4">
+                        <Target className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                        第五章　顧客価値の創造
+                      </h3>
+                    </div>
+
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第9条（顧客起点のサイクル）
+                        </h4>
+                        <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+                          <li>
+                            •
+                            顧客（プロジェクトオーナー）の意向を起点としたビジネスサイクルを構築します
+                          </li>
+                          <li>
+                            •
+                            分散型組織の柔軟性を活かしながら、顧客価値の最大化を追求します
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第10条（成果物の品質保証）
+                        </h4>
+                        <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+                          <li>
+                            •
+                            顧客の資産となる成果物の品質を、適切なレベルのレビューとテストによって担保します
+                          </li>
+                          <li>
+                            •
+                            自律的な品質管理体制を通じて、継続的な改善を実現します
+                          </li>
                         </ul>
                       </div>
                     </div>
