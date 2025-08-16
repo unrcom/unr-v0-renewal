@@ -4,6 +4,14 @@ import { SiteFooter } from "@/components/site-footer";
 export default function TimesPage() {
   const timelineData = [
     {
+      period: "2025年8月16日",
+      events: ["トップページにて Company Constitution を公開"],
+    },
+    {
+      period: "2025年7月",
+      events: ["データ分析基盤再構築プロジェクトの業務支援を開始"],
+    },
+    {
       period: "2025年5月",
       events: [
         "生成AI (Claude model) を用いたコード自動生成プロジェクトを開始し複数のワークロードを試行中",

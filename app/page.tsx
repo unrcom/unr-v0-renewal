@@ -2,7 +2,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { FileText, ExternalLink } from "lucide-react";
+import {
+  FileText,
+  ExternalLink,
+  Scale,
+  Users,
+  MessageSquare,
+} from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -39,8 +45,186 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Latest News Section */}
+        {/* Company Constitution Section */}
         <div className="bg-white dark:bg-gray-800 py-16 sm:py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                Company Constitution
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                私たちが大切にする価値観と行動指針
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20 rounded-lg border dark:border-gray-700 p-6 sm:p-8 lg:p-10">
+                {/* 前文 */}
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500 dark:bg-cyan-600 rounded-full mb-4">
+                    <Scale className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                      前文
+                    </h3>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                      私たちは、お客様、パートナー企業、そして社会全体との信頼関係を基盤とし、技術を通じて豊かな未来を創造することを使命とします。すべての人の自由と多様性を尊重し、公正で透明な事業活動を行うことをここに宣言します。
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  {/* 第一章 包括的自由権 */}
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-blue-500 dark:bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                        <Users className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                        第一章　包括的自由権
+                      </h3>
+                    </div>
+
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第1条（基本的人権の尊重）
+                        </h4>
+                        <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+                          <li>
+                            •
+                            すべての人が生まれながらに持つ自由と権利を最大限に尊重します
+                          </li>
+                          <li>
+                            •
+                            個人の尊厳を何よりも大切にし、これを侵すことはありません
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第2条（個人の尊重）
+                        </h4>
+                        <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+                          <li>
+                            •
+                            すべての個人が持つ生命、自由、幸福を追求する権利を尊重します
+                          </li>
+                          <li>• 一人ひとりの価値観と選択を大切にします</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 第二章 法の下の自由と多様性 */}
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-green-500 dark:bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                        <Scale className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                        第二章　法の下の自由と多様性
+                      </h3>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                        第3条（平等と多様性）
+                      </h4>
+                      <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+                        <li>
+                          • 法の下での平等を守り、多様性豊かな組織を構築します
+                        </li>
+                        <li>
+                          •
+                          性別、年齢、国籍、信条、社会的地位によって差別することはありません
+                        </li>
+                        <li>
+                          •
+                          多様な背景を持つ人々との協働によって、組織をより柔軟かつ強固にしていきます
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* 第三章 精神的自由 */}
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-purple-500 dark:bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                        <MessageSquare className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                        第三章　精神的自由
+                      </h3>
+                    </div>
+
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第4条（思想・良心の自由）
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-300 ml-4">
+                          • すべての人の思想と良心の自由を尊重します
+                        </p>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第5条（信教の自由）
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-300 ml-4">
+                          • 宗教的信念や価値観の多様性を認め、尊重します
+                        </p>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第6条（表現の自由）
+                        </h4>
+                        <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+                          <li>• 社内においては一切の表現の自由を保障します</li>
+                          <li>
+                            •
+                            社外においては、常にお客様と社会全体の利益のために責任を持った表現を行います
+                          </li>
+                          <li>
+                            •
+                            お客様とお客様の資産に対しては、お客様との契約の下、お客様の利益のために責任を持って取り扱います
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第7条（活動の自由）
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-300 ml-4">
+                          •
+                          職業選択や居住の自由など、基本的な生活の自由を尊重します
+                        </p>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                          第8条（学問・技術の自由）
+                        </h4>
+                        <ul className="text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+                          <li>• 学習と技術革新への自由な探求を支援します</li>
+                          <li>• 創造的な発想と挑戦を奨励します</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Latest News Section */}
+        <div className="bg-gray-50 dark:bg-gray-900 py-16 sm:py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
